@@ -1,7 +1,6 @@
 package br.com.metodosnumericos.RegressaoLinear.Resolving;
 
 public class resolving {
-
     private double sumX=0;
     private double sumY=0;
     private double sumFXx=0;
