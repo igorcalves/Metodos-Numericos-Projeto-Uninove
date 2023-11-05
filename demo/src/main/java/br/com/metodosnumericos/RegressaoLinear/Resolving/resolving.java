@@ -8,7 +8,7 @@ public class resolving {
 
 
     public void sumAll(double[] listX,double[] listY){
-        for(int i =0;i <4; i++){
+        for(int i =0;i <listX.length; i++){
             sumX +=  listX[i];
             sumY +=  listY[i];
             sumFXx +=  listX[i] * listY[i];
