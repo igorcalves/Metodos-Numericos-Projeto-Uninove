@@ -57,6 +57,7 @@ public class MainInput {
             Double.parseDouble(numeric);
             return true;
         } catch (NumberFormatException e) {
+            
             return false;
         }
     }
