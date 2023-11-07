@@ -2,7 +2,7 @@ package br.com.metodosnumericos.RegressaoLinear.Resolving;
 
 import java.util.List;
 
-public class resolving {
+public class Resolving {
     private double sumX=0;
     private double sumY=0;
     private double sumFXx=0;
