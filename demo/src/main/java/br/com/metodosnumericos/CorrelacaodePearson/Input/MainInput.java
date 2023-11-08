@@ -1,11 +1,12 @@
-package br.com.metodosnumericos.RegressaoLinear.Input;
+package br.com.metodosnumericos.CorrelacaodePearson.Input;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import br.com.metodosnumericos.RegressaoLinear.Resolving.Resolving;
+import br.com.metodosnumericos.CorrelacaodePearson.Resolving;
 import br.com.metodosnumericos.Util.Messages;
+
 
 public class MainInput {
 
@@ -15,8 +16,8 @@ public class MainInput {
         Resolving resolving = new Resolving();
         List<Double> listX = getList('X', -1);
         resolving.sumAll(listX, getList('Y', listX.size()));
-        resolving.firstFormula(listX.size());
-        System.out.println(resolving.resultFirstFOrmula());
+        resolving.calculate(listX.size());
+        System.out.println(resolving);
     }
 
     private List<Double> getList(char option, int size) {

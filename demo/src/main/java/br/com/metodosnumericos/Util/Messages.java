@@ -1,4 +1,4 @@
-package br.com.metodosnumericos.RegressaoLinear.Util;
+package br.com.metodosnumericos.Util;
 
 public class Messages {
     public static String rules = 
