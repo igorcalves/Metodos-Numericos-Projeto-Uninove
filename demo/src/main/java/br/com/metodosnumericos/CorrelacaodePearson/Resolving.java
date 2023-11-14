@@ -53,6 +53,7 @@ public class Resolving {
     public double getR() {
         return r;
     }
+    
 
     @Override
     public String toString() {

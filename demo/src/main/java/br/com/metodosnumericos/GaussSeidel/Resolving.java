@@ -6,149 +6,63 @@ import br.com.metodosnumericos.Mocks.XYZ;
 
 public class Resolving {
 
-    public Double switSignal(Double value) {
-        if (value > 0) {
-            value = value - (value * 2);
-            return value;
-        }
-        value = value + (Math.abs(value) * 2);
-        return value;
+    double rX = 0;
+    double rY = 0;
+    double rZ = 0;
 
-    }
+    double valuesXYZ [][]= XYZ.getValuesXYZ();
 
-    public Double calculateX(Double y, Double z) {
+    
 
-        Double resultEqual = XYZ.getResults().get(0);
+    public void isolateAll(double x, double y,double z,int stop,double[][] valuesXYZ,List<Double> XYZ){
+        
+    final double v1X = XYZ.get(0);
+    final double v2X = valuesXYZ[0][1] * -1;
+    final double v3X =  valuesXYZ[0][2] * -1;
+    final double divX =  valuesXYZ[0][0];
 
-        Double firstValue = XYZ.getFirstLine().get(0);
+    final double v1Y = XYZ.get(1);
+    final double v2Y = valuesXYZ[1][0] * -1;
+    final double v3Y = valuesXYZ[1][2] * -1;
+    final double divY = valuesXYZ[1][1];
 
-        Double secondValue = switSignal(XYZ.getFirstLine().get(1));
+    final double v1Z = XYZ.get(2);
+    final double v2Z = valuesXYZ[2][0] * -1;
+    final double v3Z = valuesXYZ[2][1] * -1;
+    final double divZ = valuesXYZ[2][2];
+        
+        if(stop == 50 ) return;
 
-        Double thirdValue = switSignal(XYZ.getFirstLine().get(2));
+        double resultX = 0;
+        double resultY = 0;
+        double resultZ = 0;
+
+
+
+        resultX = (v1X + (v2X * y) + (v3X * z)) / divX;
+
+        resultY = (v1Y + (v2Y * x) + (v3Y * z)) / divY;
+
+        resultZ = (v1Z + (v2Z * x) + (v3Z * y)) / divZ;
+
+
+        System.out.println(
+            "X = " + resultX +
+            " Y = " + resultY +
+            " Z = " + resultZ +
+            " DX = " + String.format("%.15f", (resultX - x))+
+            " DY = " + String.format("%.15f", (resultY - y)) +
+            " DZ = " + String.format("%.15f", (resultZ - z)));
+
+        stop ++;
+        isolateAll(resultX, resultY, resultZ, stop,valuesXYZ,XYZ);
         
 
-        Double result = 0.0;
-
-        secondValue = secondValue * y;
-        thirdValue = thirdValue  *z;
-
-
-
-        ///Primeira Parte
-        if(switSignal(XYZ.getFirstLine().get(1)) > 0 ) {
-
-            result = resultEqual  -secondValue;
-
-        }
-        else result = resultEqual + secondValue;
-
-        ///Segunda Parte
-
-        if(switSignal(XYZ.getFirstLine().get(2)) > 0 ) {
-
-            result = resultEqual - thirdValue;
-
-        }
-        else result = result + thirdValue;
-
-        if (firstValue == 0) return result;
-        else return result/firstValue;
-
-    }
-
-    public Double calculateY(Double x, Double y) {
-        Double z = 0.0;
-
-        Double resultEqual = XYZ.getResults().get(1);
-
-
-        Double secondValue = switSignal(XYZ.getSecondLine().get(0));
-
-        Double thirdValue = switSignal(XYZ.getSecondLine().get(2));
-        
-
-        Double result = 0.0;
-
-        secondValue = secondValue * x;
-        thirdValue = thirdValue  *z;
-
-
-
-        ///Primeira Parte
-        if(switSignal(XYZ.getSecondLine().get(1)) > 0 ) {
-
-            result = resultEqual   + Math.abs(secondValue);
-
-        }
-        else result = resultEqual - Math.abs(secondValue);
-
-        ///Segunda Parte
-
-        if(switSignal(XYZ.getSecondLine().get(2)) > 0 ) {
-            result = result   + Math.abs(thirdValue);
-        }
-
-        else result = result   - Math.abs(thirdValue);
-
-        if(XYZ.getSecondLine().get(1) == 1 && XYZ.getSecondLine().get(1) != 0 ){
-            return result;
-        }
-        else return result /x;
-
-    }
-
-    public Double calculateZ() {
-        Double x =  calculateX(0.0, 0.0);
-        Double y = calculateY(x, 0.0);
-
-
-        Double resultEqual = XYZ.getResults().get(2);
-
-
-        Double secondValue = switSignal(XYZ.getThirdLine().get(0));
-
-        Double thirdValue = switSignal(XYZ.getThirdLine().get(1));
-        System.out.println(resultEqual + " " + secondValue + " " + thirdValue);
-        Double result = 0.0;
-
-        secondValue = secondValue* x;
-        thirdValue = thirdValue*y;
-
-        System.out.println(resultEqual + " " + secondValue + " " + thirdValue);
-
-        ///Primeira Parte
-        if(switSignal(XYZ.getThirdLine().get(1)) > 0 ) {
-
-            result = resultEqual   +secondValue;
-
-        }
-        else result = resultEqual - secondValue;
-
-        ///Segunda Parte
-
-        if(switSignal(XYZ.getThirdLine().get(2)) > 0 ) {
-            result = result   - thirdValue;
-        }
-
-        else result = result   + thirdValue;
-
-
-        if(XYZ.getThirdLine().get(1) == 1 && XYZ.getThirdLine().get(1) != 0 ){
-            System.out.println("X = " + x + "Y = " + y + "Z = " + result );
-            return result;
-        }
-        
-        else
-        {
-            System.out.println("X = " + x + " Y = " + y + " Z = " + result/resultEqual );
-            return result /resultEqual;
-        } 
-
-
     }
 
 
 
 
 
+    
 }

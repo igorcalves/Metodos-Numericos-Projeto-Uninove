@@ -10,8 +10,12 @@ public class ZonaDeTeste {
 
     public static void main(String[] args) {
 
-        MainInput input = new MainInput();
-        input.All();
+        Resolving rs = new Resolving();
+
+        rs.sumAll(array.getListX(), array.getListY());
+
+        rs.calculate(15);
+        System.out.println(rs);
     }
     
 }
