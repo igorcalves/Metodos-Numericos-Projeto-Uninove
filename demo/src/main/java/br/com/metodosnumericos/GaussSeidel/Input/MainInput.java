@@ -18,9 +18,8 @@ public class MainInput {
     public void all(){
 
         System.out.println(Messages.rulesGaus);
-
         for (int i = 0; i < 3; i++) {
-
+            System.out.println((i + 1) + "º" + " Linha");
             for (int j = 0; j < 3; j++) {
                 System.out.print("Digite o valor de x" + (j+1) +": ");
                 String value = sc.nextLine();
@@ -49,11 +48,11 @@ public class MainInput {
         for (int i = 0; i < 3; i++) {
             String value = "";
             System.out.println("Digite os valores default de X Y Z");
-            System.out.print("º" + i + "Valor : ");
+            System.out.print((1+i) + "º" + " Valor : ");
             value = sc.nextLine();
              while (isValidDoubleNumeric(value) != true) {
                 System.out.println(Messages.errorMessage);
-                System.out.print("º" + (i +1) + "Valor: ");
+                System.out.print((i +1) +"º" +  " Valor: ");
                 value = sc.nextLine();
  }            
         defaultXYZ.add(Double.parseDouble(value));
