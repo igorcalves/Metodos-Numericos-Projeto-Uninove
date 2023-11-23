@@ -45,8 +45,6 @@ no caminho src\main\java\com\metodosnumericos existe uma pasta para cada metodo 
 
 ## ✒️ Autor
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
 * **Desenvolvedor** - *Igor Alves* - [perfil github](https://github.com/igorcalves)
 
 
