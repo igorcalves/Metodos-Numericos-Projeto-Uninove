@@ -1,12 +1,12 @@
-package br.com.igor.app.Lagrange.Input;
+package br.com.metodosnumericos.Lagrange.Input;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import br.com.igor.app.Lagrange.Resolving;
-import br.com.igor.app.Lagrange.Objetos.ValorLagrange;
-import br.com.igor.app.Lagrange.Objetos.x;
+import br.com.metodosnumericos.Lagrange.Resolving;
+import br.com.metodosnumericos.Lagrange.Objetos.ValorLagrange;
+import br.com.metodosnumericos.Lagrange.Objetos.x;
 
 public class LagrangeInput {
 
@@ -22,7 +22,8 @@ public class LagrangeInput {
         System.out.print("Digite o valor de (X) ou 'proximo' para digitar o proximo parametro: ");
         while (!valueOfX.atribuirValorDouble(sc.nextLine(), 'X')) {
             if (valueOfX.getDoubleValue() != null) {
-                    finalValueWithCorrectSignal = valueOfX.getDoubleValue() * -1;;
+                finalValueWithCorrectSignal = valueOfX.getDoubleValue() * -1;
+                ;
                 listX.add(new ValorLagrange(finalValueWithCorrectSignal, 1));
             }
             valueOfX = new x("");
@@ -30,9 +31,10 @@ public class LagrangeInput {
         }
 
         finalValueWithCorrectSignal = 0.0;
-        System.out.print("Digite os valores de (Y) você deverá digitar "+listX.size()+ " valores "+" para obter o resultado: ");
+        System.out.print("Digite os valores de (Y) você deverá digitar " + listX.size() + " valores "
+                + " para obter o resultado: ");
         int c = 0;
-        while (!valueOfX.atribuirValorDouble(sc.nextLine(), 'Y') ) {
+        while (!valueOfX.atribuirValorDouble(sc.nextLine(), 'Y')) {
             if (valueOfX.getDoubleValue() != null) {
                 finalValueWithCorrectSignal = valueOfX.getDoubleValue();
                 listY.add(finalValueWithCorrectSignal);
@@ -40,29 +42,26 @@ public class LagrangeInput {
             }
             valueOfX = new x("");
             showList('Y');
-            
-            if(c == listX.size()) break;
+
+            if (c == listX.size())
+                break;
         }
-
-
-
 
     }
 
     public void attList() {
         Resolving rs = new Resolving();
-        rs.run(listX,listY);
+        rs.run(listX, listY);
     }
 
-
-    private void showList(char l){
-        if(l == 'X'){
+    private void showList(char l) {
+        if (l == 'X') {
             for (ValorLagrange valores : listX) {
                 System.out.print((valores.getValor() * -1) + " ");
             }
             System.out.println();
         }
-        if(l == 'Y'){
+        if (l == 'Y') {
             for (Double valores : listY) {
                 System.out.print(valores + " ");
             }

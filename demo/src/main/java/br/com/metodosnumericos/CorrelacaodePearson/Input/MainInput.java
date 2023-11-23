@@ -12,7 +12,7 @@ public class MainInput {
 
     private Scanner sc = new Scanner(System.in);
 
-    public void All() {
+    protected void All() {
         Resolving resolving = new Resolving();
         List<Double> listX = getList('X', -1);
         resolving.sumAll(listX, getList('Y', listX.size()));

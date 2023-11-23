@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.metodosnumericos.GaussSeidel.Resolving;
-import br.com.metodosnumericos.Mocks.XYZ;
-import br.com.metodosnumericos.Mocks.array;
+import br.com.metodosnumericos.Util.Mocks.XYZ;
+import br.com.metodosnumericos.Util.Mocks.array;
 
 
 public class ZonaTeste {

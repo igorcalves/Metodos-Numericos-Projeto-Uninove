@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.metodosnumericos.CorrelacaodePearson.Input.MainInput;
-import br.com.metodosnumericos.Mocks.array;
+import br.com.metodosnumericos.Util.Mocks.array;
 
 public class ZonaDeTeste {
 

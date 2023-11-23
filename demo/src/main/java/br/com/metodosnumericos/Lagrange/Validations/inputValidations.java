@@ -1,4 +1,4 @@
-package br.com.igor.app.Lagrange.Validations;
+package br.com.metodosnumericos.Lagrange.Validations;
 
 public class inputValidations {
 

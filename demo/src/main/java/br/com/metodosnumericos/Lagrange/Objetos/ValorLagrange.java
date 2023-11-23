@@ -1,4 +1,4 @@
-package br.com.igor.app.Lagrange.Objetos;
+package br.com.metodosnumericos.Lagrange.Objetos;
 
 public class ValorLagrange {
 

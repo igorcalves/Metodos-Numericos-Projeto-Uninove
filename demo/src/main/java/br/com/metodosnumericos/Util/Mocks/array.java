@@ -1,4 +1,4 @@
-package br.com.metodosnumericos.Mocks;
+package br.com.metodosnumericos.Util.Mocks;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,10 @@
-package br.com.igor.app.Lagrange;
+package br.com.metodosnumericos.Lagrange;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.igor.app.Lagrange.Objetos.ValorLagrange;
+import br.com.metodosnumericos.Lagrange.Objetos.ValorLagrange;
+
 
 
 public class Resolving {

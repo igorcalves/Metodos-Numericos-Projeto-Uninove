@@ -2,7 +2,7 @@ package br.com.metodosnumericos.GaussSeidel;
 
 import java.util.List;
 
-import br.com.metodosnumericos.Mocks.XYZ;
+import br.com.metodosnumericos.Util.Mocks.XYZ;
 
 public class Resolving {
 

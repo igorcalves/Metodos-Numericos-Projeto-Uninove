@@ -1,6 +1,6 @@
-package br.com.igor.app.Lagrange.Objetos;
+package br.com.metodosnumericos.Lagrange.Objetos;
 
-import br.com.igor.app.Lagrange.Validations.inputValidations;
+import br.com.metodosnumericos.Lagrange.Validations.inputValidations;
 
 public abstract class regras {
 

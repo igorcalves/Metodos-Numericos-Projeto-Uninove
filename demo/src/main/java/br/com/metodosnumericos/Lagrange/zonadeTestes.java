@@ -1,9 +1,6 @@
-package br.com.igor.app.Lagrange;
+package br.com.metodosnumericos.Lagrange;
 
-
-
-import br.com.igor.app.Lagrange.Input.LagrangeInput;
-
+import br.com.metodosnumericos.Lagrange.Input.LagrangeInput;
 
 public class zonadeTestes {
     public static void main(String[] args) {
