@@ -52,7 +52,7 @@ public class Resolving {
     public String resultFirstFOrmula(){
         String op = "+";
         if(firstFormulaB <0){
-            op = "-";
+            op = "";
         }
         return "g(x) = " + String.format("%.4f", firstFormulaA) + " "+ op +" " + String.format("%.4f", firstFormulaB) +"x";
     }
