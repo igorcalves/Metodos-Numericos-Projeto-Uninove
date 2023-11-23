@@ -1,4 +1,4 @@
-package br.com.metodosnumericos.Lagrange.Validations;
+package br.com.metodosnumericos.Util.Validations;
 
 public class inputValidations {
 
@@ -25,7 +25,7 @@ public class inputValidations {
     public static boolean rangeNumeric(String numberInString) {
         if (isValidNumeric(numberInString)) {
             int number = Integer.parseInt(numberInString);
-            if (number >= 0 && number <= 9) {
+            if (number > 0 && number <= 5) {
                 return true;
             }
         }

@@ -1,6 +1,6 @@
 package br.com.metodosnumericos.Lagrange.Objetos;
 
-import br.com.metodosnumericos.Lagrange.Validations.inputValidations;
+import br.com.metodosnumericos.Util.Validations.inputValidations;
 
 public abstract class regras {
 
