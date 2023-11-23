@@ -1,11 +1,11 @@
 # Métodos Numéricos
 Projeto com o proposito de resolver 5 metodos numéricos sendo eles:
 
-1. Método de Cramer
-2. Regressão Linear
-3. Correlação de Pearson
-4. Interpolação Polinomial de Lagrange
-5. Método de Gauss Seidel
+**1. Método de Cramer**
+**2. Regressão Linear**
+**3. Correlação de Pearson**
+**4. Interpolação Polinomial de Lagrange**
+**5. Método de Gauss Seidel**
 
 
 
