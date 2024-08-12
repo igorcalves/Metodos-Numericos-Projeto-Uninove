@@ -50,7 +50,7 @@ no caminho src\main\java\com\metodosnumericos existe uma pasta para cada metodo 
 
 ## 📄 Métodos
 
-Método de Cramer
+### Método de Cramer
 
 Descrição: O Método de Cramer é uma técnica para resolver sistemas lineares de equações usando determinantes. Cada variável é expressa como o quociente do determinante de uma matriz específica pelo determinante da matriz dos coeficientes.
 Uso Típico: Resolução de sistemas lineares de pequeno porte.
